@@ -102,18 +102,19 @@ with col1:
     
     # The WebRTC streamer component
     if st.session_state.run_webcam:
-        webrtc_streamer(
-            key="example",
-            video_transformer_factory=VideoTransformer,
-            rtc_configuration={
+       webrtc_streamer(
+    key="example",
+    video_transformer_factory=VideoTransformer,
+    rtc_configuration={
         "iceServers": [
             {"urls": ["stun:stun.l.google.com:19302"]},
             {"urls": ["stun:stun.twilio.com:3478"]},
             # You would add TURN server URLs here if you had them
             # Example: {"urls": ["turn:my-turn-server.com"], "username": "user", "credential": "password"}
         ]
-            media_stream_constraints={"video": True, "audio": False},
-        )
+    },
+    media_stream_constraints={"video": True, "audio": False},
+)
     else:
         st.info("Click 'Start Webcam' to begin translation.")
 
