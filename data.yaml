@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 29
+names: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z','delete','nothing','space']
+
+roboflow:
+  workspace: sign-language-7vbn7
+  project: american-sign-language-letters-xkemt
+  version: 1
+  license: Public Domain
+  url: https://universe.roboflow.com/sign-language-7vbn7/american-sign-language-letters-xkemt/dataset/1
