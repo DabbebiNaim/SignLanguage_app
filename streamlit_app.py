@@ -105,6 +105,13 @@ with col1:
         webrtc_streamer(
             key="example",
             video_transformer_factory=VideoTransformer,
+            rtc_configuration={
+        "iceServers": [
+            {"urls": ["stun:stun.l.google.com:19302"]},
+            {"urls": ["stun:stun.twilio.com:3478"]},
+            # You would add TURN server URLs here if you had them
+            # Example: {"urls": ["turn:my-turn-server.com"], "username": "user", "credential": "password"}
+        ]
             media_stream_constraints={"video": True, "audio": False},
         )
     else:
