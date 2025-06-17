@@ -108,9 +108,11 @@ with col1:
     rtc_configuration={
         "iceServers": [
             {"urls": ["stun:stun.l.google.com:19302"]},
-            {"urls": ["stun:stun.twilio.com:3478"]},
-            # You would add TURN server URLs here if you had them
-            # Example: {"urls": ["turn:my-turn-server.com"], "username": "user", "credential": "password"}
+            {
+                "urls": ["turn:openrelay.metered.ca:80"],
+                "username": "openrelayproject",
+                "credential": "openrelayproject"
+            }
         ]
     },
     media_stream_constraints={"video": True, "audio": False},
