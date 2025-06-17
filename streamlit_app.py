@@ -105,9 +105,6 @@ with col1:
         webrtc_streamer(
             key="example",
             video_transformer_factory=VideoTransformer,
-            rtc_configuration=RTCConfiguration({
-                "iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]
-            }),
             media_stream_constraints={"video": True, "audio": False},
         )
     else:
